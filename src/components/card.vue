@@ -38,6 +38,6 @@ export default defineComponent({
 .my-card{
   width:250px;
   height:100px;
-  background-color:#87CEEB;
+  background-color:#9512c9;
 }
 </style>
