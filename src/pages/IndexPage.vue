@@ -14,16 +14,17 @@ div(
       class="md:grid grid-cols-2 gap-10 md:ml-10"
     )
       div(
+        class="bg-white"
       )
         bar
       div(
       )
         pie(
-          class="md:w-96 md:h-96"
+          class="md:w-96 md:h-96 bg-white"
         )
   div
     bubble(
-      class="md:w-1/2 md:h-1/2 md:ml-10"
+      class="md:w-1/2 md:h-1/2 md:ml-10 bg-white"
     )
 </template>
 
@@ -43,9 +44,15 @@ export default defineComponent({
     pie,
     bubble
   },
-  async created () {
-    const { data } = await axios.get('https://dummyjson.com/products')
-    console.log(data)
+  data () {
+    return {
+      produto: false
+    }
+  },
+  mounted () {
+    axios
+      .get('https://dummyjson.com/products')
+      .then(response => (this.produto = response.data))
   }
 })
 </script>

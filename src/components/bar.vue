@@ -22,10 +22,18 @@ export default defineComponent({
     return {
       chartData: {
         labels: ['Januaryfff', 'February', 'March', 'maio'],
-        datasets: [{ data: [40, 20, 12, 50] }],
-        borderColor: '#7C8CF8',
-        backgroundColor: '#7C8CF8',
-        label: 'Data One'
+        datasets: [{
+          data: [40, 20, 12, 50],
+          borderColor: '#7C8CF8',
+          backgroundColor: '#7C8CF8',
+          label: 'Data One'
+        },
+        {
+          data: [40, 20, 12, 50],
+          borderColor: '#7C8CF8',
+          backgroundColor: '#',
+          label: 'Data One'
+        }]
       },
       chartOptions: {
         responsive: true
